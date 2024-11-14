@@ -1,14 +1,14 @@
 from flask import Flask
 from flask import render_template, request
 
-app = Flask("__name__") ### handphone, app和文件名重，和colab有区别？？
+app = Flask("__name__") ### 这里"app"最好和文件名一致，"__": 在手机上使用时如果有web scam, creater will look for you
 
 
 @app.route("/",methods =["GET","POST"]) #/是staring point,
 def index():
     return(render_template("index.html")) ###111
 
-if __name__ == "__main__": #magic name, double confirm, responsable
+if __name__ == "__main__": #magic name, "__": for system,我们不能用于variable name， double confirm：writing+responsible, responsable
     app.run() 
 
 
